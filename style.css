@@ -1,0 +1,236 @@
+:root {
+  --bg-color: #000;
+  --section-bg: #181818;
+  --text-color: #fff;
+  --accent-color: #ff2222;
+  --nav-bg: #111;
+  --input-bg: #000;
+  --input-border: #444;
+  --footer-bg: #111;
+  --link-hover: #ff2222;
+  --logo-color: #ff2222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--logo-color);
+  margin-right: 2rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--link-hover);
+}
+#theme-toggle {
+  margin-left: 2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent-color);
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+}
+#theme-toggle:hover, #theme-toggle:focus {
+  border: 2px solid var(--accent-color);
+  background: rgba(255,34,34,0.08);
+  box-shadow: 0 2px 8px rgba(255,34,34,0.08);
+}
+
+/* CENTER ALL MAIN SECTIONS */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* SECTIONS */
+.hero {
+  padding: 5rem 1rem 3rem 1rem;
+  background: var(--nav-bg);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255,34,34,0.2);
+}
+.cta-btn:hover {
+  background: #b30000;
+}
+.section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.section h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.alt-bg {
+  background: var(--section-bg);
+}
+ul {
+  padding-left: 1.2rem;
+}
+ul li b {
+  color: var(--accent-color);
+}
+b, strong {
+  color: var(--accent-color);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.contact-form button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #b30000;
+}
+footer {
+  background: var(--footer-bg);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* FULL WIDTH SECTIONS */
+.full-width-section {
+  width: 100%;
+  padding: 0; /* Remove default section padding */
+}
+.full-width-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  --bg-color: #fff;
+  --section-bg: #f7fafd;
+  --text-color: #000;
+  --accent-color: #ff2222;
+  --nav-bg: #f7fafd;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --footer-bg: #f7fafd;
+  --link-hover: #ff2222;
+  --logo-color: #ff2222;
+}
+body.light-mode .logo {
+  color: var(--logo-color);
+}
+body.light-mode .nav-links a {
+  color: var(--text-color);
+}
+body.light-mode .nav-links a:hover {
+  color: var(--link-hover);
+}
+body.light-mode .cta-btn {
+  background: var(--accent-color);
+  color: #fff;
+}
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode b,
+body.light-mode strong,
+body.light-mode ul li b {
+  color: var(--accent-color);
+}
