@@ -1,0 +1,58 @@
+body.light-mode {
+  --bg-color: #fff;
+  --section-bg: #f7fafd;
+  --text-color: #000;
+  --accent-color: #ff2222;      
+  --nav-bg: #fff;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --footer-bg: #f7fafd;
+  --link-hover: #ff2222;
+  --logo-color: #ff2222;
+}
+
+/* Optional: force navbar and intro backgrounds to white in light mode */
+body.light-mode .navbar {
+  background: var(--nav-bg);
+  color: var(--text-color);
+  border: none;         /* No border */
+  box-shadow: none;     /* Optional: remove shadow for a flat look */
+}
+
+body.light-mode #intro-section {
+  background: var(--bg-color);
+}
+
+body.light-mode {
+  color: var(--text-color);
+}
+
+/* Black border for each section in light mode */
+body.light-mode section {
+  border: 0.5px solid #000;
+  box-sizing: border-box;
+}
+
+/* Keep all text black in light mode */
+body.light-mode,
+body.light-mode .navbar-logo,
+body.light-mode .navbar-links a,
+body.light-mode .navbar-theme button,
+body.light-mode .primary-btn,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode b,
+body.light-mode strong,
+body.light-mode ul li b,
+body.light-mode p,
+body.light-mode label,
+body.light-mode input,
+body.light-mode textarea {
+  color: var(--text-color) !important;
+}
+
+/* Button and accent color overrides */
+body.light-mode .primary-btn {
+  background: var(--accent-color);
+  color: #fff;
+}

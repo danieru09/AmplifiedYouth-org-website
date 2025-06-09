@@ -5,19 +5,25 @@
   <title>AmplifiedYouth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_light.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-content">
-      <div class="navbar-logo">Amplified Youth</div>
-      <ul class="navbar-links">
-        <li><a href="#mission-section">About</a></li>
-        <li><a href="#events-section">Events</a></li>
-        <li><a href="#join-section">Join</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-      </ul>
+      <div class="navbar-logo">
+        <img src="pictures/logo.jpg" alt="amplified logo" class="logo">
+        Amplified Youth
+      </div>
+      <div class="navbar-links">
+        <a href="#mission-section">About</a>
+        <a href="#events-section">Events</a>
+        <a href="#join-section">Join</a>
+        <a href="#contact-section">Contact</a>
+      </div>
+      <div class="navbar-theme">
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌓</button>
+      </div>
     </div>
-    <button id="theme-toggle" aria-label="Toggle Light/Dark Mode"></button>
   </nav>
 
   <main>
@@ -32,16 +38,31 @@
     </section>
 
     <section id="mission-section" class="section centered-content">
-      <h2>About Us</h2>
-      <p>We are a community of <b>young leaders</b> aiming to create <b>positive change</b>. Our mission is to empower youth through <b>education</b>, <b>service</b>, and <b>collaboration</b>.</p>
+      <div class="about-layout">
+        <div class="about-block">
+          <h3>Our Vision</h3>
+          <p>To see a movement of transformed students who are committed followers of Christ growing in small groups.</p>
+        </div>
+        <div class="about-vertical-line"></div>
+        <div class="about-block">
+          <h3>Our Mission</h3>
+          <p>To Honor God and make disciples who will be followers of Christ who will make disciples that follows Christ.</p>
+        </div>
+      </div>
     </section>
 
     <section id="events-section" class="section alternate-bg fullwidth-section">
       <div class="fullwidth-content centered-content">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li><b>Leadership Workshop</b> – July 10, 2025</li>
-          <li><b>Community Clean-Up</b> – August 5, 2025</li>
+        <h2>Events</h2>
+        <ul class="events-list">
+          <li class="event-card">
+            <b>Ignite Amplified Anniversary</b>
+            <span class="event-date">– July 5, 2025</span>
+          </li>
+          <li class="event-card">
+            <b>Coming Soon</b>
+            <span class="event-date">– January 0, 0000</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -66,8 +87,12 @@
   </main>
 
   <footer>
-    &copy; 2025 Youth Organization Name. All rights reserved.
+    &copy; 2025 Amplified Youth. All rights reserved.
   </footer>
-  <script src="theme.js"></script>
+  <script>
+document.getElementById('theme-toggle').addEventListener('click', function() {
+  document.body.classList.toggle('light-mode');
+});
+</script>
 </body>
 </html>
